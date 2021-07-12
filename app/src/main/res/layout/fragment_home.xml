@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Home"
+    android:background="#B5BBFF"
+    android:paddingLeft="80dp">
+
+    <ImageView
+        android:id="@+id/img_finance"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/clipart303357"/>
+
+    <TextView
+        android:layout_below="@+id/img_finance"
+        android:id="@+id/txt_monthly_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="22sp"
+        android:text="Monthly Credit"
+        android:textColor="#646AC4"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inp_txt"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txt_monthly_credit"
+        android:hint="Enter Monthly Credit"
+        android:textColorHint="#D7DAFF"
+        android:textSize="18sp"
+        android:paddingLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_finance"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="90dp"
+        android:text="Rs"
+        android:textSize="22sp"
+        android:textColor="#646AC4"/>
+
+    <Button
+        android:layout_below="@+id/inp_txt"
+        android:id="@+id/btn_mth_cred_save"
+        android:text="Save"
+        android:layout_marginLeft="150dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#606DFF"
+        android:textColor="#D7DAFF"
+        android:textSize="18sp"
+        android:textAllCaps="false"/>
+
+
+</RelativeLayout>

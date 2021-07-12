@@ -1,5 +1,6 @@
 package com.example.myfinances.data
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 
@@ -13,5 +14,5 @@ interface transactionDao {
     fun deleteTransaction(transaction: transaction)
 
     @Query("SELECT * FROM transactions")
-    suspend fun getTransactions()
+    fun getTransactions(): List<transaction>
 }
