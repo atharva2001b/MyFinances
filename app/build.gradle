@@ -46,6 +46,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    //charts
+    implementation "ir.mahozad.android:pie-chart:0.3.0"
+
 
     //room
     def room_version = "2.3.0"

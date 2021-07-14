@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="3dp">
 
     <LinearLayout
@@ -11,13 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/input_field"
-        android:backgroundTint="#D7DAFF"
+        android:backgroundTint="#7578ff"
         android:orientation="horizontal"
         android:weightSum="8"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="3dp">
 
         <TextView
+            android:id="@+id/sr_no"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -27,12 +28,39 @@
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="3"
             android:text="C0ar"
+            android:textColor="@color/white"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:text="cost"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_edit_24"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_delete_outline_24"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 

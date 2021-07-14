@@ -14,5 +14,5 @@ interface transactionDao {
     fun deleteTransaction(transaction: transaction)
 
     @Query("SELECT * FROM transactions")
-    fun getTransactions(): List<transaction>
+    fun getTransactions(): MutableList<transaction>
 }

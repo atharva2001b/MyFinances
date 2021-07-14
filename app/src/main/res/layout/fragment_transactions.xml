@@ -1,20 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Transactions"
     android:background="#B5BBFF"
-    android:padding="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".fragments.Transactions">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/input_field"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/status_inbudget"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Currently in budget"
+            android:textAlignment="center"
+            android:textColor="#49c466"
+            android:textSize="22sp" />
+
+
+    </LinearLayout>
+
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/txt_transactions"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Transactions"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="120dp"
+        android:text="Expenditure"
+        android:textColor="#646AC4"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_transactions" />
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/add_shade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/add_layout"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_field"
+        android:backgroundTint="#B5BBFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Add Expenditure"
+            android:textColor="#646AC4"
+            android:layout_marginStart="30dp"
+            android:textSize="22sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inp_title"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="0dp"
+            android:hint="Enter title"
+            android:paddingLeft="10dp"
+            android:textColorHint="#D7DAFF"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inp_cost"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:hint="Enter cost"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:textColorHint="#D7DAFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_finance"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="2dp"
+                android:text="Rs"
+                android:textSize="20sp"
+                android:textColor="#646AC4"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/inp_txt"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#606DFF"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="#D7DAFF"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/inp_txt"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#606DFF"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="#D7DAFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:src="@drawable/ic_add"
+        app:borderWidth="0dp"
+        app:fabCustomSize="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#B5BBFF" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
